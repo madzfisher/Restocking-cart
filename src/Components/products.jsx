@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactBootstrap from 'react-bootstrap/Accordion';
 import axios from 'axios';
+import Cart from './cart';
 import {
     Card,
     Accordion,
@@ -150,13 +151,14 @@ const products = [
       );
     });
   //=========Cart=============
-  const Cart = (props) => {
-    const { Card, Accordion, Button } = ReactBootstrap;
-    let data = props.location.data ? props.location.data : products;
-    console.log(`data:${JSON.stringify(data)}`);
+//   const Cart = (props) => {
+//     const { Card, Accordion, Button } = ReactBootstrap;
+//     let data = props.location.data ? props.location.data : products;
+//     console.log(`data:${JSON.stringify(data)}`);
   
-    return <Accordion defaultActiveKey="0">{list}</Accordion>;
-  };
+//     return <Accordion defaultActiveKey="0">{list}</Accordion>;
+//   };
+<Cart list={list}/>
     let finalList = () => {
       let total = checkOut();
       let final = cart.map((item, index) => {
